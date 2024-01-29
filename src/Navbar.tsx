@@ -2,7 +2,7 @@ import React from 'react';
 
 
 import Home from "./pages/Home";
-import Curiosities from "./pages/Curiosities";
+import Curiosities from "./pages/NewCuriosity";
 const Navbar: React.FC = () => (
   <div className="bg-indigo-600 h-auto"> 
     <div className="flex items-baseline">

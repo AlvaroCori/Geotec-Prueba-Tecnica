@@ -2,14 +2,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
-import Curiosities from "./pages/Curiosities";
-
+import NewCuriosity from "./pages/NewCuriosity";
+import MyCuriosities from "./pages/MyCuriosities";
 const AppRouter: React.FC = () => {
   return (
     <Router>
       <Routes>
         <Route path="/home" element={<Home/>} />
-        <Route path="/curiosities" element={<Curiosities />} />
+        <Route path="/new curiosity" element={<NewCuriosity />} />
+        <Route path="/curiosities" element={<MyCuriosities />} />
       </Routes>
     </Router>
   );

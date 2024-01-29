@@ -25,7 +25,7 @@ const copyToClipboard = async (texto : string) => {
 };
 
 
-const Curiosities: React.FC = () => {
+const NewCuriosity: React.FC = () => {
   let isLoaded = false;
   let [firstWord,setFirstWord] = useState("");
   let [fact,setFact] = useState("");
@@ -63,5 +63,5 @@ const Curiosities: React.FC = () => {
   )
 }
 
-export default Curiosities;
+export default NewCuriosity;
 
