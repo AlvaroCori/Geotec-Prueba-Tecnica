@@ -1,19 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 
+
+import Navbar from './Navbar';
+import AppRouter from './AppRouter';
 function App() {
   return (
     <div className="App">
-      <header>
-      </header>
-      <body>
-        <h1 className="text-3xl font-bold underline">
-          Prueba tecnica
-        </h1>
-      </body>
+        <Navbar />
+        <AppRouter />
     </div>
+    
   );
 }
 
 export default App;
+
+
