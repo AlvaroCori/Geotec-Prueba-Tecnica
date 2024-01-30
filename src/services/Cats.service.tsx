@@ -1,4 +1,3 @@
-import {CatModel} from "../Models/CatModel";
 export class CatsService{
     private urlResource : any;
     private url: String;
