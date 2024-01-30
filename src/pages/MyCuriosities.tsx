@@ -6,9 +6,10 @@ import CatCard from '../components/CatCard';
 const MyCuriosities: React.FC = () => {
   let cats = new Cats();
   let catCards = [];
-
+  let keyId = 1;
   for (let cat of cats.getCats()){
-    catCards.push(<CatCard cat={cat}/>);
+    catCards.push(<CatCard key={"cat-"+String(keyId)} cat={cat}/>);
+    keyId = keyId + 1;
   }
   return (
     <div className="flex items-center flex-col text-2xl">

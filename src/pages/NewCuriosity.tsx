@@ -5,29 +5,11 @@ import { CatsService } from '../services/Cats.service';
 import { useEffect, useState } from 'react'
 import PATHS from '../global';
 import { CatModel } from '../Models/CatModel';
-
+import copyToClipboard from '../functions/copyToClipboard';
+import saveTxt from '../functions/SaveTxt';
 import Cats from '../CatsSaved';
 let cats = new Cats();
-const saveTxt = async (fact: string) => {
-  
-  const blob = new Blob([fact], { type: 'text/plain' });
-  const link = document.createElement('a');
 
-  link.href = window.URL.createObjectURL(blob);
-  link.download = Date.now().toString() + '-archivo.txt';
-  document.body.appendChild(link);
-
-  link.click();
-  document.body.removeChild(link);
-};
-
-const copyToClipboard = async (texto : string) => {
-    try {
-      await navigator.clipboard.writeText(texto);
-    } catch (error) {
-      console.error(error);
-    }
-};
 
 function saveCat(fact: string, cat: CatModel | null){
   console.log("dddd");
@@ -76,7 +58,7 @@ const NewCuriosity: React.FC = () => {
         <button className="py-2 px-4 mx-6 bg-blue-500 hover:bg-blue-400 text-white hover:border-blue-500 rounded" onClick={()=>saveCat(firstWord+" "+fact, cat)}>
           SAVE
         </button>
-        <button className="py-2 px-4 mx-6 bg-blue-500 hover:bg-blue-400 text-white hover:border-blue-500 rounded" onClick={()=>copyToClipboard(fact)}>
+        <button className="py-2 px-4 mx-6 bg-blue-500 hover:bg-blue-400 text-white hover:border-blue-500 rounded" onClick={()=>copyToClipboard(firstWord+" "+fact)}>
           COPY
         </button>
       </div>
