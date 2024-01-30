@@ -12,7 +12,7 @@ const MyCuriosities: React.FC = () => {
     keyId = keyId + 1;
   }
   return (
-    <div className="flex items-center flex-col text-2xl">
+    <div className="flex items-center flex-col text-2xl h-full my-12">
       <div className="flex justify-center flex-wrap rounded-lg bg-slate-200 max-w-full">
         {catCards}
       </div>

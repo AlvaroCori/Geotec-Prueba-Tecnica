@@ -9,18 +9,16 @@ const Home: React.FC = () => {
     <div className="flex items-center flex-col">
       <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">CATS</span> CURIOSITIES</h1>
       <img className='h-8 w-8' src={paw} alt="claw"></img>
-      <div className="flex items-center py-11">
-        <div className="flex items-center flex-col h-96 w-96 px-11">
+      <div className="flex items-center flex-col py-11 md:flex-row">
+        <div className="flex items-center flex-col h-96 w-96 px-11 text-justify">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. 
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          Welcome to our website! We are delighted to have you here. 
+          Explore our site with kitten curiosities and kitten pictures. 
+          We invite you to dive into a world of knowledge and entertainment! 
+          Don't forget that you can see in My Curiosities the same ones you chose to save with kitten pictures. 
+          Welcome to our exciting and enriching digital space!
           </p>
-          <button className="py-2 px-4 bg-blue-500 hover:bg-blue-400 text-white font-bold border-b-4 border-blue-700 hover:border-blue-500 rounded">
+          <button className="py-2 px-4 bg-blue-500 hover:bg-blue-400 text-white font-bold border-b-4 border-blue-700 hover:border-blue-500 rounded my-8">
             <a href="newcuriosity">LAUNCH CURIOSITIES</a>
           </button>
         </div>

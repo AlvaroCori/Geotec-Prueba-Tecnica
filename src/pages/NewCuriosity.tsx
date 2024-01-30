@@ -45,16 +45,16 @@ const NewCuriosity: React.FC = () => {
   }, []);
   return (
     <div className="flex items-center flex-col text-2xl">
-      <div className="flex items-center justify-center rounded-lg bg-teal-100 w-96 h-96">
+      <div className="flex items-center justify-center rounded-lg bg-gradient-to-r from-purple-100 from-indigo-200 to-red-100 mt-3 w-96 h-96">
         <img className="rounded-lg max-w-80 max-h-80 brightness-140 contrast-140" src={cat?.url} alt={cat?.name}></img>
       </div>
-      <div className='flex items-center flex-col w-8/12'>
-        <p className='text-center h-44'><span className="text-transparent bg-clip-text bg-gradient-to-r bold to-zinc-700 from-sky-400">{firstWord}</span>{" "+fact}</p>
+      <div className='flex items-center flex-col w-8/12 max-h-40 my-8 overflow-auto'>
+        <p className='text-center'><span className="text-transparent bg-clip-text bg-gradient-to-r bold to-zinc-700 from-sky-400">{firstWord}</span>{" the time of the Spanish Inquisition, Pope Innocent VIII condemned cats as evil and thousands of cats were burned. Unfortunately, the widespread killing of cats led to an explosion of the rat population, which exacerbated the effects of the Black Death."}</p>
       </div>
-      <div>
-      <button className="py-2 px-4 bg-blue-500 hover:bg-blue-400 text-white hover:border-blue-500 rounded">
+      <div className='flex items-center justify-center my-8 w-4/5'>
+        <button className="py-2 px-4 mx-6 bg-blue-500 hover:bg-blue-400 text-white hover:border-blue-500 rounded">
             <a href="newcuriosity">NEW CURIOSITY</a>
-          </button>
+        </button>
         <button className="py-2 px-4 mx-6 bg-blue-500 hover:bg-blue-400 text-white hover:border-blue-500 rounded" onClick={()=>saveCat(firstWord+" "+fact, cat)}>
           SAVE
         </button>

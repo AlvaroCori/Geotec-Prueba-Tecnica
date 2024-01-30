@@ -6,9 +6,11 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
+  IconButton,
 } from '@mui/material';
 import { CatModel } from '../Models/CatModel';
 import copyToClipboard from '../functions/copyToClipboard';
+import CloseIcon from '@mui/icons-material/Close';
 interface MiDialogProps {
     open: boolean;
     onClose: () => void;
@@ -17,6 +19,7 @@ interface MiDialogProps {
 
 const MiDialog: React.FC<MiDialogProps> = ({ open, onClose, cat}) => {
   // Puedes cambiar la URL de la imagen y el contenido del párrafo según tus necesidades
+  let cl = onClose;
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>Diálogo con Imagen</DialogTitle>
@@ -28,6 +31,7 @@ const MiDialog: React.FC<MiDialogProps> = ({ open, onClose, cat}) => {
         <Button onClick={() => copyToClipboard(cat.fact)} color="primary">
           COPY FACT
         </Button>
+
       </DialogActions>
     </Dialog>
   );
