@@ -1,5 +1,13 @@
 # Getting Started with Create React App
 
+Hello this project contains a front end containing cat curiosities with cat pictures. On the page you can get random pictures and curiosities as well as store locally the cat pictures with the curiosities.
+
+The API's used are the following.
+Cat pictures:
+https://cataas.com/
+Curiosities:
+https://catfact.ninja/fact
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

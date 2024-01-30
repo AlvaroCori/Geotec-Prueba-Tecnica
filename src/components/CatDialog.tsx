@@ -5,12 +5,10 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
-  DialogTitle,
-  IconButton,
+  DialogTitle
 } from '@mui/material';
 import { CatModel } from '../Models/CatModel';
 import copyToClipboard from '../functions/copyToClipboard';
-import CloseIcon from '@mui/icons-material/Close';
 interface MiDialogProps {
     open: boolean;
     onClose: () => void;

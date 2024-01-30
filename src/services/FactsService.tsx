@@ -1,4 +1,3 @@
-
 export class FactsService{
     private urlResource : any;
     Fact: String;

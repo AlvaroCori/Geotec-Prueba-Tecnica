@@ -1,5 +1,4 @@
 import React from 'react'
-//import { useEffect, useState } from 'react'
 import PATHS from '../global';
 import paw from '../images/paw.png';
 import Cats from '../CatsSaved';
