@@ -22,10 +22,10 @@ const MiDialog: React.FC<MiDialogProps> = ({ open, onClose, cat}) => {
   let cl = onClose;
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle>Diálogo con Imagen</DialogTitle>
+      <DialogTitle className='flex items-center text-center justify-center font-bold text-2xl'>{cat.name}</DialogTitle>
       <DialogContent>
-        <img src={cat.url} alt="Imagen" style={{ width: '100%' }} />
-        <DialogContentText>{cat.fact}</DialogContentText>
+        <img src={cat.url} alt="Imagen" className='w-full' />
+        <DialogContentText className='my-6'>{cat.fact}</DialogContentText>
       </DialogContent>
       <DialogActions>
         <Button onClick={() => copyToClipboard(cat.fact)} color="primary">
