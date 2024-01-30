@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PATHS from '../global';
-
-
+import Cats from '../CatsSaved';
+import CatCard from '../components/CatCard';
 
 const MyCuriosities: React.FC = () => {
+  let cats = new Cats();
+  let catCards = [];
 
+  for (let cat of cats.getCats()){
+    catCards.push(<CatCard cat={cat}/>);
+  }
   return (
     <div className="flex items-center flex-col text-2xl">
-      <div className="flex items-center justify-center rounded-lg bg-teal-100 w-96 h-96">
-        <img className="rounded-lg max-w-80 max-h-80 brightness-140 contrast-140" src={PATHS.RANDOM_CAT} alt="random cat"></img>
+      <div className="flex justify-center flex-wrap rounded-lg bg-slate-200 max-w-full">
+        {catCards}
       </div>
-      <div className='flex items-center flex-col w-8/12'>
-      </div>
-      <div>
-      </div>
+
     </div>
   )
 }
 
 export default MyCuriosities;
 
+
+//<img className="rounded-lg max-w-80 max-h-80 brightness-140 contrast-140" src={PATHS.RANDOM_CAT} alt="random cat"></img>
